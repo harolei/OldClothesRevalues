@@ -1,5 +1,11 @@
 extends ../layout
 
-block content
-  h1 I'm using generator-express MVC!
-  h2 My name is ZhanfeiXiao.
+block append js
+  script(src='http://localhost:35729/livereload.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js')
+
+block append content
+  p This is the home page of old clothes management app.
+  div
+    input(type='text', data-ng-model='name')
+    span content in this input is {{name}}
